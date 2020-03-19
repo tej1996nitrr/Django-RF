@@ -7,9 +7,10 @@ from django.contrib.auth import get_user_model
 
 class PostView(viewsets.ModelViewSet):
     permission_classes = (IsAuthorOrReadOnly,)
+    # permission_classes = (permissions.IsAuthenticated)
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    # permission_classes = (permissions.IsAuthenticated)
 
 class CategoryView(viewsets.ModelViewSet):
     queryset  =Category.objects.all()

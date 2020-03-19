@@ -13,7 +13,6 @@ class PostSerializer(serializers.ModelSerializer):
         fields = ('category', 'id','author','title','content','created_at',)
 
 class UserSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = get_user_model()
         fields = ('id' ,'username')
